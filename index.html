@@ -1,0 +1,154 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Bandai_Namco_Holdings_logo.svg/2560px-Bandai_Namco_Holdings_logo.svg.png">
+    <title>Ace Combat Zero: The Belkan War｜BANDAI NAMCO</title>
+    <!-- Google Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-top">
+
+    <!-- Language Selection Screen -->
+    <div id="language-selector-screen">
+        <div class="language-selector-content">
+            <h1 id="language-prompt">Choose your language / 言語を選択してください</h1>
+            <div class="language-buttons">
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="ja">日本語</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Video Screen -->
+    <div id="intro-video-container">
+        <video id="intro-video" playsinline>
+            <source src="namco.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Main Content (Initially Hidden) -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#page-top"><img src="https://cdn2.steamgriddb.com/logo/6b1e66c68e84eb13778effaba01d3982.png" alt="Ace Combat Zero Logo" class="logo-img" id="header-logo-img"></a>
+                </div>
+                <div id="live-datetime-container"></div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="nav-wrapper" id="nav-wrapper">
+                    <ul>
+                        <li><a href="#story" data-key="nav_story">STORY</a></li>
+                        <li><a href="#trailer" data-key="nav_trailer">TRAILER</a></li>
+                        <li><a href="#squadrons" data-key="nav_squadrons">SQUADRONS</a></li>
+                        <li><a href="#aces" data-key="nav_aces">THE ACES</a></li>
+                        <li><a href="#planes" data-key="nav_planes">PLANES</a></li>
+                        <li><a href="#gallery" data-key="nav_gallery">GALLERY</a></li>
+                        <li><a href="#details" data-key="nav_details">DETAILS</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <img src="https://cdn2.steamgriddb.com/logo/6b1e66c68e84eb13778effaba01d3982.png" alt="Ace Combat Zero: The Belkan War" class="hero-logo-img">
+                    <!--<p class="release-date" data-key="release_date">"Yo, buddy. You still alive?"</p>
+			<p class="release-date">― Foulke to Cipher</p>-->
+                </div>
+            </section>
+
+            <section id="story" class="content-section hidden">
+                <h2 data-key="story_title">THE BELKAN WAR</h2>
+                <div class="story-content">
+                    <div class="story-text">
+                        <h3 data-key="story_subtitle1">Fifteen Years Ago, There Was a War.</h3>
+                        <p data-key="story_text1">The year is 1995. The Principality of Belka, facing economic collapse from a series of internal crises, invades its neighbors in a desperate bid for resources. In response, the Allied Forces, led by the Osean Federation and the Union of Yuktobanian Republics, launch a massive counter-offensive.</p>
+                    </div>
+                    <div class="story-text">
+                        <h3 data-key="story_subtitle2">The Demon Lord of the Round Table</h3>
+                        <p data-key="story_text2">Amidst the chaos, one mercenary fighter wing, the 66th Air Force Unit "Galm," rises to prominence. Piloted by the legendary ace "Cipher," they turn the tide of every battle they enter. This is their story, told through the eyes of the aces they fought—a tale of knights, mercenaries, and the ghosts of the battlefield.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="trailer" class="content-section hidden">
+                <h2 data-key="trailer_title">MEMORIAL TRAILER</h2>
+                <div class="video-container">
+                    <video id="announce-trailer" playsinline muted autoplay loop>
+                        <source id="trailer-source" src="trailer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <section id="squadrons" class="content-section hidden">
+                <h2 data-key="squadrons_title">LEGENDARY SQUADRONS</h2>
+                <div class="grid-container" id="squadron-grid-container"></div>
+            </section>
+
+            <section id="aces" class="content-section hidden">
+                <h2 data-key="aces_title">KEY FIGURES</h2>
+                <div class="grid-container" id="aces-grid-container"></div>
+            </section>
+            
+            <section id="planes" class="content-section hidden">
+                <h2 data-key="planes_title">ICONIC AIRCRAFT</h2>
+                <div class="grid-container" id="plane-grid-container"></div>
+            </section>
+
+            <section id="gallery" class="content-section hidden">
+                <h2 data-key="gallery_title">DEASSIFIED GALLERY</h2>
+                <div id="gallery-clickable-container" class="art-container">
+                    <img id="gallery-img" src="" alt="Ace Combat Zero Gallery Art">
+                </div>
+            </section>
+
+            <section id="details" class="content-section hidden">
+                <h2 data-key="details_title">GAME DETAILS</h2>
+                <div class="game-details">
+                    <ul id="game-details-list">
+                        <!-- Game details will be dynamically inserted here -->
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Bandai_Namco_Holdings_logo.svg/2560px-Bandai_Namco_Holdings_logo.svg.png" alt="Bandai Namco Logo">
+            </div>
+        </footer>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="sortie.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Modal Structure -->
+    <div id="details-modal-overlay" class="modal-hidden">
+        <div id="details-modal-content">
+            <span id="modal-close-btn">&times;</span>
+            <img id="modal-image" src="" alt="Modal Image">
+            <h3 id="modal-title"></h3>
+            <p id="modal-details"></p>
+            <button id="modal-back-to-top" title="Back to top">&uarr;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
