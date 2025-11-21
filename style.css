@@ -40,7 +40,7 @@ nav {
 }
 
 .logo-img {
-    height: 30px; /* <--- Changed from 40px to 35px */
+    height: 40px; /* <--- Changed from 40px to 35px */
     display: block;
 }
 
